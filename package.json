@@ -1,0 +1,35 @@
+{
+	"name": "zoom-access-lab",
+	"version": "1.0.0",
+	"description": "Zoom Acecss Lab",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon",
+		"lint": "eslint src/**.js",
+		"start": "node ./src/index.js"
+	},
+	"author": "Will Hughes",
+	"license": "UNLICENSED",
+	"dependencies": {
+		"eslint": "^8",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"lowdb": "^7.0.1",
+		"nodemon": "^3.1.0",
+		"ora": "^8.0.1",
+		"prettier": "^3.2.5",
+		"prompts": "^2.4.2",
+		"underscore": "^1.13.6",
+		"ws": "^8.17.0"
+	},
+	"nodemonConfig": {
+		"exec": "npm run lint && node ./src/index.js",
+		"ext": "js, mjs, cjs",
+		"watch": [
+			"src/"
+		],
+		"env": {
+			"NODE_ENV": "development"
+		}
+	}
+}
